@@ -15,4 +15,13 @@ class Board
     self.grid[x][y] = piece
   end
 
+  #fill board
+  #pawn promotion?
+  #make move
+
+
 end
+
+b = Board.new
+
+p b.grid
