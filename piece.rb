@@ -8,6 +8,26 @@ class Piece
   end
 
 
+
+  def king?
+    self.king
+  end
+
+  private
+
+  def move_diffs
+    raise 'invalid color' unless color == (:white || :black)
+    if self.king
+      move_diffs = [[-1, -1], [-1, 1], [1, -1], [1, 1]]
+    elsif self.color == :white
+      move_diffs = [[-1, -1], [-1, 1]]
+    elsif self.color == :black
+      move_diffs =[[1, -1], [1, 1]]
+    end
+    move_diffs
+  end
+
+
 end
 
 pimp = Piece.new([5,3], 1)

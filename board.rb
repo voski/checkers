@@ -19,6 +19,9 @@ class Board
   #pawn promotion?
   #make move
 
+  def valid_pos?(pos)
+    pos.all? { |coord| coord.between?(0, dim - 1)}
+  end
 
 end
 
